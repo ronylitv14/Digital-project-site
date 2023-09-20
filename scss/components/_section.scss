@@ -1,0 +1,18 @@
+@import "../base/colors";
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 60px;
+    color: map-get($map: $colors, $key: "primary-gray");
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1; /* 100% */
+  }
+
+  &--expanded {
+    padding-bottom: 90px;
+  }
+}

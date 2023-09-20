@@ -1,0 +1,15 @@
+@mixin getLink($hz-padding, $color, $bg-color) {
+  display: inline-block;
+
+  padding: 30px $hz-padding;
+
+  color: map-get($map: $colors, $key: $color);
+  background-color: map-get($map: $colors, $key: $bg-color);
+
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1; /* 100% */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}

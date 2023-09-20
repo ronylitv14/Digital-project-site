@@ -1,0 +1,24 @@
+.container {
+  width: 1170px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--hero {
+    display: flex;
+    align-items: center;
+  }
+
+  &--limit {
+    display: flex;
+    margin-bottom: -30px;
+  }
+
+  &--projects {
+    display: flex;
+    flex-direction: column;
+  }
+}

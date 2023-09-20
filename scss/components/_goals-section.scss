@@ -1,0 +1,53 @@
+@import "../base/colors";
+
+.goals {
+  &__title {
+    margin-bottom: 60px;
+
+    color: map-get($map: $colors, $key: "primary-gray");
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1; /* 100% */
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    counter-reset: num;
+  }
+
+  &__item {
+    counter-increment: num;
+
+    display: flex;
+    align-items: center;
+
+    color: map-get($map: $colors, $key: "primary-dark");
+    font-size: 22px;
+    line-height: 1.63; /* 163.636% */
+  }
+
+  &__item::before {
+    content: counter(num);
+
+    display: inline-block;
+
+    margin-right: 30px;
+
+    color: map-get($map: $colors, $key: "secondary-gray");
+    font-family: "San Francisco Pro";
+    font-size: 200px;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__item:first-child {
+    margin-right: 170px;
+  }
+
+  &__text {
+    min-width: 279px;
+  }
+}

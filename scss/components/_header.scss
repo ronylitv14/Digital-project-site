@@ -1,0 +1,109 @@
+@import "../base/colors";
+
+.nav {
+  display: flex;
+
+  &__logo {
+    display: flex;
+    width: 73px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 331px;
+    text-decoration: none;
+  }
+  &__text {
+    font-family: "Bebas Neue";
+    font-size: 10px;
+    text-transform: uppercase;
+    color: map-get($map: $colors, $key: "primary-dark");
+    text-align: center;
+  }
+  // &__text {
+  //   display: inline-block;
+
+  //   width: 100%;
+  //   height: 13px;
+  //   background-image: url(".././images/icons/Vector.svg");
+
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
+}
+
+.pages {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    padding-top: 44px;
+    padding-bottom: 47px;
+
+    // display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__link {
+    font-size: 12px;
+    color: map-get($map: $colors, $key: "primary-dark");
+
+    font-size: 12px;
+    line-height: 1; /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__link.current::before,
+  &__link.current::after {
+    content: "";
+
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+
+    background-color: map-get($map: $colors, $key: "primary-dark");
+    transform: scale(1);
+  }
+
+  &__link::before,
+  &__link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+
+    background-color: map-get($map: $colors, $key: "primary-dark");
+    transform: scale(0);
+    transition: transform 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
+  &__link::after {
+    bottom: -5px;
+  }
+
+  &__link::before {
+    top: -5px;
+  }
+
+  &__link:hover::before,
+  &__link:hover::after {
+    transform: scale(1);
+  }
+}
