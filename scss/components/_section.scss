@@ -4,6 +4,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  background-color: map-get($map: $colors, $key: "primary-white");
+
   &__title {
     margin-bottom: 60px;
     color: map-get($map: $colors, $key: "primary-gray");
